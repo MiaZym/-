@@ -49,10 +49,9 @@ def determinant_matrix(matrix):
 # A^(-1)*A*X=A^(-1)*B
 
 def transpose(matrix):
-    matrixnew = np.zeros((n,n),dtype = np.int32)
-    for i in range(n):
-        for j in range(n):
-            matrixnew[j][i]=matrix[i][j]
+    def transpose(matrix):
+    matrixnew = np.array([list(i) for i in zip(*matrix)])
+
     return matrixnew
 
 def multiply_matrix(A, B):
